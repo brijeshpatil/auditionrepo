@@ -1,0 +1,395 @@
+﻿<%@ master language="C#" autoeventwireup="true" inherits="Visitor_visitor, App_Web_n3knofbl" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="en">
+<head runat="server">
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <title>Audition Builder</title>
+    <link href='http://fonts.googleapis.com/css?family=Oswald:400,300,700' rel='stylesheet'
+        type='text/css'>
+    <link rel="stylesheet" href="../styles/style.css" />
+    <link href="../styles/modal.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="../styles/inner.css" />
+    <link rel="stylesheet" href="../styles/layout.css" />
+    <link rel="stylesheet" href="../styles/flexslider.css" />
+    <link rel="stylesheet" href="../styles/color.css" />
+    <link rel="stylesheet" href="../styles/prettyPhoto.css" media="screen" />
+    <link href="../styles/modal.css" rel="stylesheet" type="text/css" />
+    <script type="text/javascript" src="../js/jquery-1.7.1.min.js"></script>
+    <!-- jQuery Superfish -->
+    <script type="text/javascript" src="../js/hoverIntent.js"></script>
+    <script type="text/javascript" src="../js/superfish.js"></script>
+    <script type="text/javascript" src="../js/supersubs.js"></script>
+    <!-- jQuery Dropdown Mobile -->
+    <script type="text/javascript" src="../js/tinynav.min.js"></script>
+    <!-- Custom Script -->
+    <script type="text/javascript" src="../js/custom.js"></script>
+</head>
+<body>
+    <form runat="server" id="form1">
+    <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+    </asp:ContentPlaceHolder>
+    <asp:ScriptManager ID="ScriptManager1" runat="server">
+    </asp:ScriptManager>
+    <div id="bodychild">
+        <div id="outercontainer">
+            <!-- HEADER -->
+            <div id="outerheader">
+                <div class="header-bglight">
+                    <header id="top">
+                    <div class="container">
+                        <div class="row">
+                           <div id="container-logomenu">
+                                <span class="logo-light"></span>
+                                <div id="logo" class="three columns">
+                                    <a href="#"><img src="../images/logo.png" alt=""/></a>
+                                </div>
+  
+                                <section id="navigation" class="nine columns">
+                                    <nav id="nav-wrap">
+                                    <ul id="topnav" class="sf-menu">
+                                        <asp:ContentPlaceHolder ID="ContentPlaceHolder2" runat="server">
+                                        <!-- Menu Content -->
+                                        
+                                            <li><a href="#">Home</a></li>
+                                            <li><a href="#">Talent</a></li>
+                                            <li><a href="#">Help</a></li>
+                                            <li class="current"><a href="#">About Us</a>
+                                                <ul>
+                                                    <li><a href="#">About Right Sidebar</a></li>
+                                                    <li><a href="#">About Left Sidebar</a></li>
+                                                    <li><a href="#">About Both Sidebar</a></li>
+                                                </ul>
+                                            </li>
+                                            <li><a href="#">News</a></li>
+                                            <li><a href="#">Contact Us</a></li>
+                                        
+                                        </asp:ContentPlaceHolder>
+                                        <li><asp:HyperLink ID="login_pop" runat="server" NavigateUrl="#login_form">Login</asp:HyperLink></li>
+                                        </ul>
+                                    </nav><!-- nav -->	
+                                </section>
+                             </div>
+                        </div>
+                        <div class="clear"></div>
+                    </div>
+                    <asp:HyperLink runat="server" NavigateUrl="#x" class="overlay" ID="login_form"></asp:HyperLink>
+    <div class="popup">
+        <table style="border:0px; color:Black; font-family:Arial; font-weight:bolder;" >
+            <tr style="border-bottom:0px;">
+                <td colspan="2" align="center" style="border-bottom:0px;">
+                    <h1 style="font-weight: bold" >
+                        Welcome Guest!</h1>
+                </td>
+                <td style="border-bottom:0px;">
+                </td>
+            </tr>
+            <tr style="border-bottom:0px;">
+                <td colspan="2" align="center" style="border-bottom:0px;">
+                    <p >
+                        Please enter your login and password here</p>
+                </td>
+                <td >
+                </td>
+            </tr>
+            <tr style="border-bottom:0px;">
+                <td style="border-bottom:0px;">
+                    <asp:Label ID="Label1" runat="server" Text="Login Id"></asp:Label>
+                </td>
+                <td style="border-bottom:0px;">
+                    <asp:TextBox ID="TextBox1" runat="server" Width="180px"></asp:TextBox>
+                </td>
+            </tr>
+            <tr style="border-bottom:0px;">
+                <td style="border-bottom:0px;">&nbsp;</td>
+            </tr>
+            <tr style="margin-top: 5px; border-bottom:0px;" >
+                <td style="border-bottom:0px;">
+                    <asp:Label ID="Label2" runat="server" Text="Password"></asp:Label>
+                </td>
+                <td style="border-bottom:0px;">
+                    <asp:TextBox ID="TextBox2" runat="server" TextMode="Password" Width="180px"></asp:TextBox>
+                </td>
+            </tr>
+            <tr style="border-bottom:0px;">
+                <td style="border-bottom:0px;">&nbsp;</td>
+            </tr>
+            <tr style="border-bottom:0px;">
+                <td style="border-bottom:0px;">
+                    <asp:Button ID="Button1" runat="server" Text="Log In" onclick="Button1_Click"/>
+                </td>
+                
+                <td style="border-bottom:0px;margin-left:10px;" align="center">
+                    <asp:HyperLink ID="join_pop" runat="server" NavigateUrl="#join_form">Forgot Password?</asp:HyperLink><br />
+                    <asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl="#">Not Registered?</asp:HyperLink>
+                    <a class="close" href="#close"></a>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <!-- popup form #2 -->
+    <a href="#x" class="overlay" id="join_form"></a>
+    <div class="popup">
+        <center>
+            <table  style="border:0px; color:Black; font-family:Arial; font-weight:bolder;" >
+                <tr>
+                    <td align="center">
+                        <h1 style="font-weight: bold">
+                            Forgot Password</h1>
+                    </td>
+                    <td>
+                    </td>
+                </tr>
+                <tr>
+                    <td align="center">
+                        <p>
+                            Please enter your details here</p>
+                    </td>
+                    <td>
+                    </td>
+                </tr>
+            </table>
+        </center>
+        <asp:UpdatePanel ID="UpdatePanel1" runat="server">
+            <ContentTemplate>
+                <asp:Panel ID="Panel1" runat="server">
+                    <table  style="border:0px; color:Black; font-family:Arial; font-weight:bolder;" >
+                        <tr>
+                            <td>
+                                <asp:Label ID="Label3" runat="server" Text="Your Email-Id"></asp:Label>
+                            </td>
+                            <td>
+                                &nbsp;
+                            </td>
+                            <td>
+                                <asp:TextBox ID="TextBox3" runat="server"></asp:TextBox>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="3" align="center">
+                                <asp:Label ID="Label6" runat="server" Text="" ForeColor="Red" Visible="false"></asp:Label>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                &nbsp;
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="3" align="center">
+                                <asp:Button ID="Button3" runat="server" Text="Submit" OnClick="Button3_Click"
+                                    />
+                            </td>
+                        </tr>
+                    </table>
+                </asp:Panel>
+            </ContentTemplate>
+        </asp:UpdatePanel>
+        <table>
+            <tr>
+                <td>
+                    <a class="close" href="#close"></a>
+                </td>
+            </tr>
+        </table>
+    </div>
+                </header>
+                    <div id="headertext">
+                        <div class="container">
+                            <div class="row">
+                                <div class="headertitle twelve columns">
+                                    <asp:ContentPlaceHolder ID="ContentPlaceHolder3" runat="server">
+                                        <!-- Header Text Content -->
+                                        <h1 class="pagetitle">
+                                            About Us</h1>
+                                        <span class="pagedesc">This can be your tagline or something you want. Whatever you
+                                            want!</span>
+                                    </asp:ContentPlaceHolder>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- END HEADER -->
+            <!-- MAIN CONTENT -->
+            <div id="outermain">
+                <div class="container">
+                    <asp:ContentPlaceHolder ID="ContentPlaceHolder4" runat="server">
+                        <!--Data Contents  -->
+                        <div class="row">
+                            <section id="maincontent" class="twelve columns">
+                            <section class="content">
+                            <p>
+                                Fusce sem ante, suscipit lacinia egestas nec, congue placerat lacus. Maecenas metus ligula, condimentum eu pulvinar non, congue vitae metus. Nam vestibulum tempor lectus, non aliquet massa imperdiet pharetra. Donec dictum fringilla molestie. Nullam ultrices nulla id mi dapibus at tempor libero consectetur. Morbi blandit augue et lorem vehicula eu pellentesque tellus laoreet. Curabitur sit amet aliquam elit.</p>
+                            <div class="row">
+                                <div class="one_third columns">
+                                    <img src="../images/content/a-pic1.jpg" alt="" class="imgblock"/>
+                                    <img src="../images/shadow-300.png" alt="" class="imgblock"/><br>
+                                    <h6 class="titleUppercase margin_bottom_middle">
+                                        John Doe / <span class="generaltext">Director</span></h6>
+                                    <p>
+                                        Proin vel lorem non urna porttitor vulputate. Vivamus augue mi, placerat id porttitor at, tempus eu nulla.</p>
+                                </div>
+                                <div class="one_third columns">
+                                    <img src="../images/content/a-pic2.jpg" alt="" class="imgblock"/>
+                                    <img src="../images/shadow-300.png" alt="" class="imgblock"/><br>
+                                    <h6 class="titleUppercase margin_bottom_middle">
+                                        Jane Doe / <span class="generaltext">Producer</span>
+                                    </h6>
+                                    <p>
+                                        Proin vel lorem non urna porttitor vulputate. Vivamus augue mi, placerat id porttitor at, tempus eu nulla.</p>
+                                </div>
+                                <div class="one_third columns">
+                                    <img src="../images/content/a-pic3.jpg" alt="" class="imgblock"/>
+                                    <img src="../images/shadow-300.png" alt="" class="imgblock"/><br>
+                                    <h6 class="titleUppercase margin_bottom_middle">
+                                        Richard Zoe  / <span class="generaltext">Cameraman</span></h6>
+                                    <p>
+                                        Proin vel lorem non urna porttitor vulputate. Vivamus augue mi, placerat id porttitor at, tempus eu nulla.</p>
+                                </div>
+                            </div>
+                            <div class="separator">
+                            </div>
+                            <div class="row">
+                                <div class="one_half columns">
+                                    <h3 class="titleUppercase">
+                                        Our Mission</h3>
+                                    <p>
+                                        In vehicula posuere mauris, id volutpat est pulvinar vel. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Curabitur commodo, lorem vitae scelerisque sagittis, ante diam laoreet ipsum, sit amet lacinia magna mi non nulla. Nunc vulputate varius nulla, vel dictum est eleifend in. Ut accumsan nibh et nunc eleifend porta. Nunc ac mauris ante, in molestie ante. Nulla neque odio, facilisis at facilisis et, mollis eget turpis.
+                                    </p>
+                                </div>
+                                <div class="one_half columns">
+                                    <h3 class="titleUppercase">
+                                        Our Vision</h3>
+                                    <p>
+                                        In vehicula posuere mauris, id volutpat est pulvinar vel. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Curabitur commodo, lorem vitae scelerisque sagittis, ante diam laoreet ipsum, sit amet lacinia magna mi non nulla. Nunc vulputate varius nulla, vel dictum est eleifend in. Ut accumsan nibh et nunc eleifend porta. Nunc ac mauris ante, in molestie ante. Nulla neque odio, facilisis at facilisis et, mollis eget turpis.
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="separator">
+                            </div>
+                            <h3 class="titleUppercase">
+                                Our Clients</h3>
+                            <p>
+                                <a href="#">
+                                <img src="../images/content/client1.png" alt="" class="imgopacity" /></a>
+                                <a href="#">
+                                <img src="../images/content/client2.png" alt="" class="imgopacity" /></a>
+                                <a href="#">
+                                <img src="../images/content/client3.png" alt="" class="imgopacity" /></a>
+                                <a href="#">
+                                <img src="../images/content/client4.png" alt="" class="imgopacity" /></a>
+                                <a href="#">
+                                <img src="../images/content/client5.png" alt="" class="imgopacity" /></a>
+                                <a href="#">
+                                <img src="../images/content/client6.png" alt="" class="imgopacity" /></a></p>
+                            </section>
+                            </section>
+                        </div>
+                    </asp:ContentPlaceHolder>
+                </div>
+            </div>
+            <!-- END MAIN CONTENT -->
+            <div id="shadowbottom">
+            </div>
+            <!-- FOOTER -->
+            <footer id="footersection">
+
+            <!-- FOOTER SIDEBAR -->
+            <div id="outerfootersidebar">
+                <div class="container">
+                    <div id="footersidebar" class="row"> 
+
+                        <div id="footcol1"  class="three columns">
+                            <ul>
+                                <li class="widget-container">
+                                    <h2 class="widget-title">Latest From BlogMaecenas sollicitudin, urna sit amet tristique.</a></h3>
+                                            <span class="lp-text">Donec blandit volutpat ipsum, ac varius nulla commodo ut. Curabitur blandit dignissim nibh sit amet</span>
+                                            <span class="clear"></span>
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+                        <div id="footcol2"  class="three columns">
+                            <ul>
+                                <li class="widget-container">
+                                    <h2 class="widget-title">Popular Post</h2>
+                                    <ul class="sn">
+                                        <li><a href="http://twitter.com/" title="Twitter"><span class="icon-img twitter"></span></a></li>
+                                        <li><a href="http://facebook.com/" title="Facebook"><span class="icon-img facebook"></span></a></li>
+                                        <li><a href="https://plus.google.com/" title="Google+"><span class="icon-img google"></span></a></li>
+                                        <li><a href="http://rss.com/" title="RSS"><span class="icon-img rss"></span></a></li>
+                                        <li><a href="http://pinterest.com/" title="Pinterest"><span class="icon-img pinterest"></span></a></li>
+                                    </ul> 
+                                </li>
+                            </ul>
+                        </div>
+                        <div id="footcol3"  class="three columns">
+                            <ul>
+                                <li class="widget-container">
+                                    <h2 class="widget-title">Latest From Blog</h2>
+                                    <ul class="ts-recent-post-widget">
+                                        <li>
+                                            <h3><a href="#">Hello world!</a></h3>
+                                            <span class="lp-text">Donec blandit volutpat ipsum, ac varius nulla commodo ut. Curabitur blandit dignissim nibh sit amet</span>
+                                            <span class="clear"></span>
+                                        </li>
+                                        <li>
+                                            <h3><a href="#">Maecenas sollicitudin, urna sit amet tristique.</a></h3>
+                                            <span class="lp-text">Donec blandit volutpat ipsum, ac varius nulla commodo ut. Curabitur blandit dignissim nibh sit amet</span>
+                                            <span class="clear"></span>
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+                        
+                        <div id="footcol4"  class="three columns">
+                            <ul>
+                                <li class="widget-container">
+                                    <h2 class="widget-title">Find Us</h2>
+                                    <div class="textwidget">
+                                        <img src="../images/content/map.png" alt="" class="alignleft" />
+                                        Goodways - Office Blvd No. 356-357<br/>
+                                        Jakarta, Indonesia<br/>
+                                        Telp: +62 500 800 12345
+                                    </div>
+                              	</li>
+                            </ul>
+                        </div>
+                        <div class="clear"></div>
+                 
+                    </div>
+                </div>
+            </div>
+            <!-- END FOOTER SIDEBAR -->
+            
+            <!-- COPYRIGHT -->
+            <div id="outercopyright">
+                <div class="container">
+                	<div class="row">
+                        <div class="twelve columns">
+                            <span id="footer-light"></span>
+                            <div id="copyright">
+                                Copyright &copy;2014. All Rights Reserved. by <a href="#">AuditionBuilder</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- END COPYRIGHT -->
+        </footer>
+            <!-- END FOOTER -->
+            <div class="clear">
+            </div>
+            <!-- clear float -->
+        </div>
+        <!-- end outercontainer -->
+    </div>
+    <!-- end bodychild -->
+    </form>
+</body>
+</html>

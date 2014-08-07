@@ -1,0 +1,267 @@
+﻿<%@ master language="C#" autoeventwireup="true" inherits="Visitor_visitor, App_Web_ksm14wuk" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="en">
+<head runat="server">
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <title>Audition Builder</title>
+    <link href='http://fonts.googleapis.com/css?family=Oswald:400,300,700' rel='stylesheet'
+        type='text/css'>
+    <link rel="stylesheet" href="../styles/style.css" />
+    <link href="../styles/modal.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="../styles/inner.css" />
+    <link rel="stylesheet" href="../styles/layout.css" />
+    <link rel="stylesheet" href="../styles/flexslider.css" />
+    <link rel="stylesheet" href="../styles/color.css" />
+    <link rel="stylesheet" href="../styles/prettyPhoto.css" media="screen" />
+    <link href="../styles/modal.css" rel="stylesheet" type="text/css" />
+    
+    <style type="text/css">
+        .profilepic
+        {
+            width: 40px;
+            height: 40px;
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center center;
+            -webkit-border-radius: 99em;
+            -moz-border-radius: 99em;
+            border-radius: 99em;
+            border: 5px solid #eee;
+            box-shadow: 0 3px 2px rgba(0, 0, 0, 0.3);
+        }
+    </style>
+</head>
+<body>
+    <form runat="server" id="form1">
+    <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+    </asp:ContentPlaceHolder>
+    <asp:ScriptManager ID="ScriptManager1" runat="server">
+    </asp:ScriptManager>
+    <div id="bodychild">
+        <div id="outercontainer">
+            <!-- HEADER -->
+            <div id="outerheader">
+                <div class="header-bglight">
+                    <header id="top">
+                    <div class="container">
+                        <div class="row">
+                           <div id="container-logomenu">
+                                <span class="logo-light"></span>
+                                <div id="logo" class="three columns">
+                                    <a href="#"><img src="../images/logo.png" alt=""/></a>
+                                </div>
+  
+                                 <section id="navigation" class="nine columns">
+                                    <nav id="nav-wrap">
+                                        <ul id="topnav" class="sf-menu">
+                                            <asp:ContentPlaceHolder ID="ContentPlaceHolder2" runat="server">
+                                        <!-- Menu Content -->
+                                         </asp:ContentPlaceHolder>
+                                          <li> <asp:LinkButton ID="LinkButton1" runat="server" style="color: crimson;" 
+                                               onclick="LinkButton1_Click">Logout</asp:LinkButton></li>
+
+                                        </ul>
+                                    </nav><!-- nav -->	
+                                </section>
+                
+                                       
+                                      
+                                       
+                             </div>
+                        </div>
+                        <div class="clear"></div>
+                    </div>
+               
+                </header>
+                    <div id="headertext">
+                        <div class="container">
+                            <div class="row">
+                                <div class="headertitle twelve columns">
+                                    <asp:ContentPlaceHolder ID="ContentPlaceHolder3" runat="server">
+                                        <!-- Header Text Content -->
+                                        <h1 class="pagetitle">
+                                            About Us</h1>
+                                        <span class="pagedesc">This can be your tagline or something you want. Whatever you
+                                            want!</span>
+                                    </asp:ContentPlaceHolder>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- END HEADER -->
+            <!-- MAIN CONTENT -->
+            <div id="outermain" style="padding: 0px;">
+                <div style="background-color: rgb(165, 163, 163); height: auto; text-align: right;
+                    vertical-align: middle;">
+                    <div style="margin-right: 3%">
+                        <asp:Image ID="Image1" runat="server" ImageUrl="~/images/guests.png" ImageAlign="Top"
+                            CssClass="profilepic" />&nbsp;&nbsp;<span style="font-size: medium; color: Black;">WelCome
+                                <asp:Label ID="Label1" runat="server" Text="Label"></asp:Label>&nbsp; </span>
+                    </div>
+                </div>
+                <div class="container" style="margin-top: 30px;">
+                    <div class="row">
+                        <section id="maincontent" class="nine columns positionright">
+                    	<div class="main">
+                    
+                        <section class="content">
+                            <asp:ContentPlaceHolder ID="ContentPlaceHolder4" runat="server">
+                        <!--Data Contents  -->
+                        
+                    </asp:ContentPlaceHolder>
+                           
+                        </section>
+                    
+  						</div>
+                    </section>
+                        <aside class="three columns">
+                    
+                    	<div class="sidebar">
+                        <ul>
+                        	
+                            <li class="widget-container">
+                                <h3 class="widget-title">My Profile</h3>
+                                 <ul>
+                                    <li><a href="myprofile.aspx">View Profile</a></li>
+                                    <li><a href="editprofile.aspx">Edit Profile</a></li>
+                                    <li><a href="changepwd.aspx">Change Password</a></li>
+                                </ul>
+                            </li>
+                            <li class="widget-container">
+                                <h3 class="widget-title">Shortcuts</h3>
+                                <ul>
+                                    <li><a href="talents.aspx">Show Talents</a></li>
+                                    <li><a href="sortlisted.aspx">Sortlisted Talents</a></li>
+                                </ul>
+                            </li>
+                            <li class="widget-container">
+                                <h3 class="widget-title">Career Center</h3>
+                                <ul>
+                                    <li><a href="#">Coaches & Schools</a></li>
+                                    <li><a href="#">Photographers</a></li>
+                                    <li><a href="#">Agency Directory</a></li>
+                                    
+                                </ul>
+                            </li>
+
+                        </ul>
+                        </div>
+                        
+                    </aside>
+                    </div>
+                </div>
+            </div>
+            <!-- END MAIN CONTENT -->
+            <div id="shadowbottom">
+            </div>
+            <!-- FOOTER -->
+            <footer id="footersection">
+
+            <!-- FOOTER SIDEBAR -->
+            <div id="outerfootersidebar">
+                <div class="container">
+                    <div id="footersidebar" class="row"> 
+
+                        <div id="footcol1"  class="three columns">
+                            <ul>
+                                <li class="widget-container">
+                                    <h2 class="widget-title">Latest From Blog</h2>
+                                    <ul class="ts-recent-post-widget">
+                                        <li>
+                                            <h3><a href="#">Hello world!</a></h3>
+                                            <span class="lp-text">Donec blandit volutpat ipsum, ac varius nulla commodo ut. Curabitur blandit dignissim nibh sit amet</span>
+                                            <span class="clear"></span>
+                                        </li>
+                                        <li>
+                                            <h3><a href="#">Maecenas sollicitudin, urna sit amet tristique.</a></h3>
+                                            <span class="lp-text">Donec blandit volutpat ipsum, ac varius nulla commodo ut. Curabitur blandit dignissim nibh sit amet</span>
+                                            <span class="clear"></span>
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+                        <div id="footcol2"  class="three columns">
+                            <ul>
+                                <li class="widget-container">
+                                    <h2 class="widget-title">Popular Post</h2>
+                                    <ul class="sn">
+                                        <li><a href="http://twitter.com/" title="Twitter"><span class="icon-img twitter"></span></a></li>
+                                        <li><a href="http://facebook.com/" title="Facebook"><span class="icon-img facebook"></span></a></li>
+                                        <li><a href="https://plus.google.com/" title="Google+"><span class="icon-img google"></span></a></li>
+                                        <li><a href="http://rss.com/" title="RSS"><span class="icon-img rss"></span></a></li>
+                                        <li><a href="http://pinterest.com/" title="Pinterest"><span class="icon-img pinterest"></span></a></li>
+                                    </ul> 
+                                </li>
+                            </ul>
+                        </div>
+                        <div id="footcol3"  class="three columns">
+                            <ul>
+                                <li class="widget-container">
+                                    <h2 class="widget-title">Latest From Blog</h2>
+                                    <ul class="ts-recent-post-widget">
+                                        <li>
+                                            <h3><a href="#">Hello world!</a></h3>
+                                            <span class="lp-text">Donec blandit volutpat ipsum, ac varius nulla commodo ut. Curabitur blandit dignissim nibh sit amet</span>
+                                            <span class="clear"></span>
+                                        </li>
+                                        <li>
+                                            <h3><a href="#">Maecenas sollicitudin, urna sit amet tristique.</a></h3>
+                                            <span class="lp-text">Donec blandit volutpat ipsum, ac varius nulla commodo ut. Curabitur blandit dignissim nibh sit amet</span>
+                                            <span class="clear"></span>
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+                        
+                        <div id="footcol4"  class="three columns">
+                            <ul>
+                                <li class="widget-container">
+                                    <h2 class="widget-title">Find Us</h2>
+                                    <div class="textwidget">
+                                        <img src="../images/content/map.png" alt="" class="alignleft" />
+                                        Goodways - Office Blvd No. 356-357<br/>
+                                        Jakarta, Indonesia<br/>
+                                        Telp: +62 500 800 12345
+                                    </div>
+                              	</li>
+                            </ul>
+                        </div>
+                        <div class="clear"></div>
+                 
+                    </div>
+                </div>
+            </div>
+            <!-- END FOOTER SIDEBAR -->
+            
+            <!-- COPYRIGHT -->
+            <div id="outercopyright">
+                <div class="container">
+                	<div class="row">
+                        <div class="twelve columns">
+                            <span id="footer-light"></span>
+                            <div id="copyright">
+                                Copyright &copy;2014. All Rights Reserved. by <a href="#">AuditionBuilder</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- END COPYRIGHT -->
+        </footer>
+            <!-- END FOOTER -->
+            <div class="clear">
+            </div>
+            <!-- clear float -->
+        </div>
+        <!-- end outercontainer -->
+    </div>
+    <!-- end bodychild -->
+    </form>
+</body>
+</html>
