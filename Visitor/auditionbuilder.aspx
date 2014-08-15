@@ -63,7 +63,7 @@
                                             <li><a href="talent.aspx">Talent</a></li>
                                             <li><a href="help.aspx">Help</a></li>
                                             <li><a href="aboutus.aspx">About Us</a></li>
-                                            <li><a href="news.aspx">News</a></li>
+                                            
                                             <li><a href="contactus.aspx">Contact Us</a></li>
                                             <li><asp:HyperLink ID="login_pop" runat="server" NavigateUrl="#login_form">Login</asp:HyperLink></li>
                                         </ul>
