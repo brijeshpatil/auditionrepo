@@ -123,7 +123,7 @@
                 
                 <td style="border-bottom:0px;margin-left:10px;" align="center">
                     <asp:HyperLink ID="join_pop" runat="server" NavigateUrl="#join_form">Forgot Password?</asp:HyperLink><br />
-                    <asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl="#">Not Registered?</asp:HyperLink>
+                    <asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl="Signup.aspx">Not Registered?</asp:HyperLink>
                     <a class="close" href="#close"></a>
                 </td>
             </tr>
